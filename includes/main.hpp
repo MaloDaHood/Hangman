@@ -16,10 +16,12 @@
 #include <limits>
 #include <algorithm>
 
-void display(std::string const &guessedWord, char const &guess, std::vector<char> misses, size_t const &guessesLeft);
+std::string askForSecretWord();
 char makeGuess();
-void inputError();
 bool isGuessInWord(char const &guess, std::string const &word);
 void compareGuessToWord(char const &guess, std::string const &word, std::string &guessedWord);
 void addMissedGuess(char const &guess, std::vector<char> &misses);
+void display(std::string const &guessedWord, char const &guess, std::vector<char> misses, size_t const &guessesLeft);
 bool isGameOver(std::string const &guessedWord, size_t const &guessesLeft);
+bool playAgain();
+void clearBuffer();
